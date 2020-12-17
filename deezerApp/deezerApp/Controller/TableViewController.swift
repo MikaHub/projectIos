@@ -12,13 +12,20 @@ class TableViewController: UITableViewController {
    // var apiService = ApiService()
     override func viewDidLoad() {
         super.viewDidLoad()
-        Data.getArtist(name: "wejdene") { (results:[Data]) in
-            for result in results{
-                print("RESULT TABLE :")
-                print("\(result)\n\n")
-            }
-            
-        }
+//        Data.getArtist(name: "wejdene") { (results:[Data]) in
+//            for result in results{
+//                print("RESULT TABLE :")
+//                print("\(result)\n\n")
+//            }
+//
+//        }
+                ApiService.getArtist(name: "wejdene") { (results:[Data]) in
+                    for result in results{
+                        print("RESULT TABLE :")
+                        print("\(result)\n\n")
+                    }
+                }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
