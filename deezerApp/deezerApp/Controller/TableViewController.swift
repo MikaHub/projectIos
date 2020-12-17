@@ -9,14 +9,22 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+   // var apiService = ApiService()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Data.getArtist(name: "wejdene") { (results:[Data]) in
+            for result in results{
+                print("RESULT TABLE :")
+                print("\(result)\n\n")
+            }
+            
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
     // MARK: - Table view data source
