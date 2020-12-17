@@ -17,7 +17,6 @@
 		9CEEDCB225896822005B83D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCB125896822005B83D1 /* LoginViewController.swift */; };
 		9CEEDCBF258968DA005B83D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCBE258968DA005B83D1 /* TableViewController.swift */; };
 		9CEEDCC425896937005B83D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCC325896937005B83D1 /* DetailViewController.swift */; };
-		EA0594B0258B531B0070603E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0594AF258B531B0070603E /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		9CEEDCB125896822005B83D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9CEEDCBE258968DA005B83D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9CEEDCC325896937005B83D1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		EA0594AF258B531B0070603E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +110,6 @@
 				9C0E05A92589654A000755D0 /* Assets.xcassets */,
 				9C0E05AB2589654A000755D0 /* LaunchScreen.storyboard */,
 				9C0E05AE2589654A000755D0 /* Info.plist */,
-				EA0594AF258B531B0070603E /* SwiftUIView.swift */,
 			);
 			path = deezerApp;
 			sourceTree = "<group>";
@@ -277,7 +274,6 @@
 			files = (
 				9CEEDCB225896822005B83D1 /* LoginViewController.swift in Sources */,
 				9C0E05A125896547000755D0 /* AppDelegate.swift in Sources */,
-				EA0594B0258B531B0070603E /* SwiftUIView.swift in Sources */,
 				9CEEDCC425896937005B83D1 /* DetailViewController.swift in Sources */,
 				9C0E05A325896547000755D0 /* SceneDelegate.swift in Sources */,
 				9CEEDCBF258968DA005B83D1 /* TableViewController.swift in Sources */,
@@ -458,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = deezerApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -477,7 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = deezerApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
