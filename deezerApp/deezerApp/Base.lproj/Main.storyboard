@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gtA-iX-4fZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gtA-iX-4fZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,17 +86,72 @@
             </objects>
             <point key="canvasLocation" x="4729" y="129"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Connexion-->
         <scene sceneID="0eP-sO-J6K">
             <objects>
                 <viewController id="eAs-ls-F9G" customClass="LoginViewController" customModule="deezerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ru7-RZ-wnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicBg" translatesAutoresizingMaskIntoConstraints="NO" id="TH7-h5-DtE">
+                                <rect key="frame" x="-290" y="99.5" width="994" height="697"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBC-3L-2eZ">
+                                <rect key="frame" x="107" y="374" width="201" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="8hm-vI-FfV"/>
+                                    <constraint firstAttribute="height" constant="49" id="pxI-Wg-OSc"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvk-7N-n52">
+                                <rect key="frame" x="107" y="468" width="201" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="8ri-bb-qHl"/>
+                                    <constraint firstAttribute="width" constant="201" id="i2q-gg-WaQ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdY-S2-92Q">
+                                <rect key="frame" x="107" y="569" width="201" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="OLb-MU-OnN"/>
+                                    <constraint firstAttribute="height" constant="65" id="y5q-qM-kD4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Connexion"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="B3L-X3-uCN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iBC-3L-2eZ" firstAttribute="top" secondItem="B3L-X3-uCN" secondAttribute="top" constant="286" id="33Z-SN-4fn"/>
+                            <constraint firstItem="B3L-X3-uCN" firstAttribute="trailing" secondItem="tdY-S2-92Q" secondAttribute="trailing" constant="106" id="6Vt-jj-kpL"/>
+                            <constraint firstItem="TH7-h5-DtE" firstAttribute="centerY" secondItem="ru7-RZ-wnZ" secondAttribute="centerY" id="Cjz-H1-C4O"/>
+                            <constraint firstItem="iBC-3L-2eZ" firstAttribute="leading" secondItem="B3L-X3-uCN" secondAttribute="leading" constant="107" id="Iod-5C-1tK"/>
+                            <constraint firstItem="TH7-h5-DtE" firstAttribute="centerX" secondItem="ru7-RZ-wnZ" secondAttribute="centerX" id="OJy-0d-aT2"/>
+                            <constraint firstItem="B3L-X3-uCN" firstAttribute="bottom" secondItem="tdY-S2-92Q" secondAttribute="bottom" constant="228" id="R3i-Bc-R01"/>
+                            <constraint firstItem="tdY-S2-92Q" firstAttribute="top" secondItem="Qvk-7N-n52" secondAttribute="bottom" constant="52" id="SiG-0U-yZb"/>
+                            <constraint firstItem="B3L-X3-uCN" firstAttribute="trailing" secondItem="Qvk-7N-n52" secondAttribute="trailing" constant="106" id="Y3l-jS-tuW"/>
+                            <constraint firstItem="Qvk-7N-n52" firstAttribute="leading" secondItem="B3L-X3-uCN" secondAttribute="leading" constant="107" id="amv-Na-voS"/>
+                            <constraint firstItem="tdY-S2-92Q" firstAttribute="leading" secondItem="B3L-X3-uCN" secondAttribute="leading" constant="107" id="tAq-1f-OJg"/>
+                            <constraint firstItem="B3L-X3-uCN" firstAttribute="trailing" secondItem="iBC-3L-2eZ" secondAttribute="trailing" constant="106" id="tgA-qp-bos"/>
+                            <constraint firstItem="Qvk-7N-n52" firstAttribute="top" secondItem="iBC-3L-2eZ" secondAttribute="bottom" constant="45" id="xgV-Y8-0LL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TcW-dJ-geh"/>
+                    <navigationItem key="navigationItem" title="Connexion" id="TcW-dJ-geh"/>
+                    <connections>
+                        <outlet property="connexionBtn" destination="tdY-S2-92Q" id="CTd-tO-fOa"/>
+                        <outlet property="loginLabel" destination="iBC-3L-2eZ" id="uwt-fq-KS8"/>
+                        <outlet property="passwordLabel" destination="Qvk-7N-n52" id="zMw-EK-8Pn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWy-xu-D9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,9 +196,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MusicBg" width="994" height="697"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
