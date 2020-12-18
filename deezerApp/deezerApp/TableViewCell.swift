@@ -15,15 +15,13 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var artistFirstName: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setCellWithValuesOf(_ data:Data){
+        updateUI(name: data.name, picture: data.picture, id: data.id)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func updateUI(name: String?, picture: String?, id: Int?){
+        self.artistName.text = name
+        //self.artistFirstName.text = picture
+        //self.imageArtist.image = picture
     }
-
 }

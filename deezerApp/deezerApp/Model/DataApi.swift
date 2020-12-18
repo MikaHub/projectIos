@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Data:Codable{
+struct Data:Decodable{
     //var data:DataArtist
     var title:String?
     var id:Int?

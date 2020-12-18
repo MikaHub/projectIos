@@ -8,7 +8,14 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    var listOfArtist = [Data]()
+        
+    @IBOutlet var viewTable: UITableView!
+    
+    private var apiService = ApiService()
+    
+
+    var listOfDetail = [Data]()
+    
     // var apiService = ApiService()
 
     override func viewDidLoad() {
@@ -20,19 +27,27 @@ class TableViewController: UITableViewController {
         //            }
         //
         //        }
-        ApiService.getArtist(name: "wejdene") { (results:[Data]) in
-            self.listOfArtist = results
-            print(self.listOfArtist)
 //            for result in results{
 //                print("RESULT TABLE :")
 //                print("\(result)\n\n")
 //            }
 //
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//                self.navigationItem.title = "\(self.listOfArtist.count) found"
-//            }
+           
+        
+        ApiService.getArtist(name: "wejdene") { (results:[Data]) in
+            self.listOfDetail = results
+            print(self.listOfDetail)
+            //self.tableView.dataSource = self
+            
+            DispatchQueue.main.async {
+                self.viewTable.reloadData()
+            }
         }
+        
+
+//        self.tableView.delegate = self
+//        self.tableView.dataSource = self
+//        self.tableView.reloadData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,20 +58,21 @@ class TableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return listOfArtist.count
+    override func tableView(_ tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+      // Return the count of the number of rows in the table
+        return listOfDetail.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+//        let artist = listOfDetail[indexPath.row]
+//        // Configure the cell...
+//        cell.textLabel?.text = artist.name
+//        cell.detailTextLabel?.text = artist.picture
+        //let artist = viewTable.cellForRow(at: indexPath)
+        //cell.setCellWithValuesOf(listOfDetail as! Data)
+        cell.setCellWithValuesOf(listOfDetail[indexPath.row])
         
-        let artist = listOfArtist[indexPath.row]
-        // Configure the cell...
-        cell.textLabel?.text = artist.name
-        cell.detailTextLabel?.text = artist.picture
         return cell
     }
     
@@ -107,3 +123,4 @@ class TableViewController: UITableViewController {
      */
     
 }
+
