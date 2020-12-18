@@ -35,11 +35,10 @@ class LoginViewController: UIViewController {
         let login = self.loginLabel.text
         let password = self.passwordLabel.text
         
-        if login == "looser" && password == "looser"{
+        if login == "nassim" && password == "12345"{
             print("connecté")
             if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "tableView") as? TableViewController{
-                self.navigationController?.pushViewController(vc, animated: true)
-                
+                navigationController?.pushViewController(vc, animated: true)
             }
         }
         
