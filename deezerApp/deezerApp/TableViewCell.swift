@@ -12,9 +12,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var imageArtist: UIImageView!
     
     @IBOutlet weak var artistName: UILabel!
-    
-    @IBOutlet weak var artistFirstName: UILabel!
-    
+        
     func setCellWithValuesOf(_ data:Data){
         updateUI(name: data.name, picture: data.picture, id: data.id)
     }

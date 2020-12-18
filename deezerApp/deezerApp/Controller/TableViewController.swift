@@ -7,43 +7,23 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UISearchBarDelegate {
         
     @IBOutlet var viewTable: UITableView!
-    
-    private var apiService = ApiService()
-    
-
+            
     var listOfDetail = [Data]()
-    
-    // var apiService = ApiService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        Data.getArtist(name: "wejdene") { (results:[Data]) in
-        //            for result in results{
-        //                print("RESULT TABLE :")
-        //                print("\(result)\n\n")
-        //            }
-        //
-        //        }
-//            for result in results{
-//                print("RESULT TABLE :")
-//                print("\(result)\n\n")
-//            }
-//
-           
         
         ApiService.getArtist(name: "wejdene") { (results:[Data]) in
             self.listOfDetail = results
             print(self.listOfDetail)
             //self.tableView.dataSource = self
-            
             DispatchQueue.main.async {
                 self.viewTable.reloadData()
             }
         }
-        
 
 //        self.tableView.delegate = self
 //        self.tableView.dataSource = self
@@ -72,11 +52,9 @@ class TableViewController: UITableViewController {
         //let artist = viewTable.cellForRow(at: indexPath)
         //cell.setCellWithValuesOf(listOfDetail as! Data)
         cell.setCellWithValuesOf(listOfDetail[indexPath.row])
-        
         return cell
     }
-    
-    
+        
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
