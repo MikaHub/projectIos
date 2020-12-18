@@ -18,6 +18,9 @@
 		9CEEDCB225896822005B83D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCB125896822005B83D1 /* LoginViewController.swift */; };
 		9CEEDCBF258968DA005B83D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCBE258968DA005B83D1 /* TableViewController.swift */; };
 		9CEEDCC425896937005B83D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCC325896937005B83D1 /* DetailViewController.swift */; };
+		9CEEDCDE258A73ED005B83D1 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCDD258A73ED005B83D1 /* ApiService.swift */; };
+		9CFDDC53258A8125007C3142 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDC52258A8125007C3142 /* TableViewCell.swift */; };
+		9CFDDC64258A9DD3007C3142 /* DataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDDC63258A9DD3007C3142 /* DataApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		9CEEDCB125896822005B83D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9CEEDCBE258968DA005B83D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9CEEDCC325896937005B83D1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9CEEDCDD258A73ED005B83D1 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		9CFDDC52258A8125007C3142 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9CFDDC63258A9DD3007C3142 /* DataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 		9C0E059F25896547000755D0 /* deezerApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CFDDC57258A9BBD007C3142 /* Model */,
+				9CEEDCDC258A719C005B83D1 /* Api */,
 				9CEEDCB025896806005B83D1 /* Controller */,
 				9C0E05A025896547000755D0 /* AppDelegate.swift */,
 				9C0E05A225896547000755D0 /* SceneDelegate.swift */,
@@ -112,6 +120,7 @@
 				9C0E05A92589654A000755D0 /* Assets.xcassets */,
 				9C0E05AB2589654A000755D0 /* LaunchScreen.storyboard */,
 				9C0E05AE2589654A000755D0 /* Info.plist */,
+				9CFDDC52258A8125007C3142 /* TableViewCell.swift */,
 			);
 			path = deezerApp;
 			sourceTree = "<group>";
@@ -143,6 +152,22 @@
 				75D4EEC4258BEC1400C1F41D /* HomeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9CEEDCDC258A719C005B83D1 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				9CEEDCDD258A73ED005B83D1 /* ApiService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		9CFDDC57258A9BBD007C3142 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CFDDC63258A9DD3007C3142 /* DataApi.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,8 +302,11 @@
 			files = (
 				9CEEDCB225896822005B83D1 /* LoginViewController.swift in Sources */,
 				9C0E05A125896547000755D0 /* AppDelegate.swift in Sources */,
+				9CEEDCDE258A73ED005B83D1 /* ApiService.swift in Sources */,
 				9CEEDCC425896937005B83D1 /* DetailViewController.swift in Sources */,
+				9CFDDC64258A9DD3007C3142 /* DataApi.swift in Sources */,
 				9C0E05A325896547000755D0 /* SceneDelegate.swift in Sources */,
+				9CFDDC53258A8125007C3142 /* TableViewCell.swift in Sources */,
 				9CEEDCBF258968DA005B83D1 /* TableViewController.swift in Sources */,
 				75D4EEC5258BEC1400C1F41D /* HomeViewController.swift in Sources */,
 			);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gtA-iX-4fZ">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2L9-U2-UXi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -51,13 +51,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="16k-Fz-upu">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="148" id="16k-Fz-upu" customClass="TableViewCell" customModule="deezerApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="148"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="16k-Fz-upu" id="URu-6t-xwC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rRl-gs-6k0">
+                                            <rect key="frame" x="40" y="31" width="72" height="86"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhK-vz-lFU">
+                                            <rect key="frame" x="150" y="23" width="114.5" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rRl-gs-6k0" firstAttribute="leading" secondItem="URu-6t-xwC" secondAttribute="leadingMargin" constant="20" id="8hj-1l-g4i"/>
+                                        <constraint firstItem="BhK-vz-lFU" firstAttribute="leading" secondItem="rRl-gs-6k0" secondAttribute="trailing" constant="38" id="IJF-CV-RTH"/>
+                                        <constraint firstItem="rRl-gs-6k0" firstAttribute="top" secondItem="URu-6t-xwC" secondAttribute="topMargin" constant="20" id="Qse-p2-KXe"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rRl-gs-6k0" secondAttribute="bottom" constant="20" id="WqV-gs-b4m"/>
+                                        <constraint firstItem="BhK-vz-lFU" firstAttribute="centerX" secondItem="URu-6t-xwC" secondAttribute="centerX" id="hdA-hq-dnS"/>
+                                        <constraint firstItem="BhK-vz-lFU" firstAttribute="top" secondItem="URu-6t-xwC" secondAttribute="top" constant="23" id="nQV-hM-DR5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="artistName" destination="BhK-vz-lFU" id="tMj-cS-Bcd"/>
+                                    <outlet property="imageArtist" destination="rRl-gs-6k0" id="dWi-kw-EKf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,6 +89,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="wfh-Oy-KGs"/>
+                    <connections>
+                        <outlet property="tableView" destination="oiy-xg-whQ" id="MJL-lM-fhX"/>
+                        <outlet property="viewTable" destination="oiy-xg-whQ" id="ys6-7U-Mcb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLI-9a-vFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
