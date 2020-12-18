@@ -6,24 +6,54 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var passwordLabel: UITextField!
+    @IBOutlet weak var loginLabel: UITextField!
+    @IBOutlet weak var connexionBtn: UIButton!
+    
+    var isTouched = false
+    var cornerRadius: CGFloat = 30
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // initialisation du cornerRadius
+        loginLabel.layer.cornerRadius = loginLabel.frame.size.height/2
+        loginLabel.clipsToBounds = true
+        passwordLabel.layer.cornerRadius = loginLabel.frame.size.height/2
+        passwordLabel.clipsToBounds = true
+        connexionBtn.layer.cornerRadius = cornerRadius
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func connexionBtn(_ sender: Any) {
+        isTouched.toggle()
+        cornerRadius = isTouched ? 0 : 30
+        connexionBtn.layer.cornerRadius = cornerRadius
+        
+        let login = self.loginLabel.text
+        let password = self.passwordLabel.text
+        
+        if login == "looser" && password == "looser"{
+            print("connecté")
+            if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "tableView") as? TableViewController{
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            }
+        }
+        
     }
-    */
-
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
