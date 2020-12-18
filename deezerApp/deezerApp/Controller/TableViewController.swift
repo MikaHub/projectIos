@@ -18,22 +18,11 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
         
         ApiService.getArtist(name: "wejdene") { (results:[Data]) in
             self.listOfDetail = results
-            print(self.listOfDetail)
-            //self.tableView.dataSource = self
+            //print(self.listOfDetail)
             DispatchQueue.main.async {
                 self.viewTable.reloadData()
             }
         }
-
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
-//        self.tableView.reloadData()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
     }
     
@@ -45,14 +34,16 @@ class TableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-//        let artist = listOfDetail[indexPath.row]
-//        // Configure the cell...
-//        cell.textLabel?.text = artist.name
-//        cell.detailTextLabel?.text = artist.picture
-        //let artist = viewTable.cellForRow(at: indexPath)
-        //cell.setCellWithValuesOf(listOfDetail as! Data)
+
         cell.setCellWithValuesOf(listOfDetail[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "music") as? MusicViewController{
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
         
     /*

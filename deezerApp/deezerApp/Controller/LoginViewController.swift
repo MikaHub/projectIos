@@ -36,7 +36,6 @@ class LoginViewController: UIViewController {
         let password = self.passwordLabel.text
         
         if login == "nassim" && password == "12345"{
-            print("connecté")
             if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "tableView") as? TableViewController{
                 navigationController?.pushViewController(vc, animated: true)
             }
@@ -44,15 +43,5 @@ class LoginViewController: UIViewController {
         
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

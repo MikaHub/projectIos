@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75D4EEC5258BEC1400C1F41D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4EEC4258BEC1400C1F41D /* HomeViewController.swift */; };
 		9C0E05A125896547000755D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E05A025896547000755D0 /* AppDelegate.swift */; };
 		9C0E05A325896547000755D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E05A225896547000755D0 /* SceneDelegate.swift */; };
 		9C0E05A825896547000755D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E05A625896547000755D0 /* Main.storyboard */; };
@@ -15,6 +14,8 @@
 		9C0E05AD2589654A000755D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0E05AB2589654A000755D0 /* LaunchScreen.storyboard */; };
 		9C0E05B82589654A000755D0 /* deezerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E05B72589654A000755D0 /* deezerAppTests.swift */; };
 		9C0E05C32589654A000755D0 /* deezerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0E05C22589654A000755D0 /* deezerAppUITests.swift */; };
+		9CDDF373258CFC6D00758D6A /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDDF372258CFC6D00758D6A /* MusicViewController.swift */; };
+		9CDDF378258CFDD500758D6A /* Coco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9CDDF377258CFDD500758D6A /* Coco.mp3 */; };
 		9CEEDCB225896822005B83D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCB125896822005B83D1 /* LoginViewController.swift */; };
 		9CEEDCBF258968DA005B83D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCBE258968DA005B83D1 /* TableViewController.swift */; };
 		9CEEDCC425896937005B83D1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEDCC325896937005B83D1 /* DetailViewController.swift */; };
@@ -41,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		75D4EEC4258BEC1400C1F41D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C0E059D25896547000755D0 /* deezerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = deezerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0E05A025896547000755D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C0E05A225896547000755D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		9C0E05BE2589654A000755D0 /* deezerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = deezerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0E05C22589654A000755D0 /* deezerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deezerAppUITests.swift; sourceTree = "<group>"; };
 		9C0E05C42589654A000755D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CDDF372258CFC6D00758D6A /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		9CDDF377258CFDD500758D6A /* Coco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Coco.mp3; sourceTree = "<group>"; };
 		9CEEDCB125896822005B83D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9CEEDCBE258968DA005B83D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		9CEEDCC325896937005B83D1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				9CEEDCDC258A719C005B83D1 /* Api */,
 				9CEEDCB025896806005B83D1 /* Controller */,
 				9C0E05A025896547000755D0 /* AppDelegate.swift */,
+				9CDDF377258CFDD500758D6A /* Coco.mp3 */,
 				9C0E05A225896547000755D0 /* SceneDelegate.swift */,
 				9C0E05A625896547000755D0 /* Main.storyboard */,
 				9C0E05A92589654A000755D0 /* Assets.xcassets */,
@@ -146,10 +149,10 @@
 		9CEEDCB025896806005B83D1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9CDDF372258CFC6D00758D6A /* MusicViewController.swift */,
 				9CEEDCB125896822005B83D1 /* LoginViewController.swift */,
 				9CEEDCBE258968DA005B83D1 /* TableViewController.swift */,
 				9CEEDCC325896937005B83D1 /* DetailViewController.swift */,
-				75D4EEC4258BEC1400C1F41D /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				9C0E05AD2589654A000755D0 /* LaunchScreen.storyboard in Resources */,
 				9C0E05AA2589654A000755D0 /* Assets.xcassets in Resources */,
+				9CDDF378258CFDD500758D6A /* Coco.mp3 in Resources */,
 				9C0E05A825896547000755D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,9 +310,9 @@
 				9CEEDCC425896937005B83D1 /* DetailViewController.swift in Sources */,
 				9CFDDC64258A9DD3007C3142 /* DataApi.swift in Sources */,
 				9C0E05A325896547000755D0 /* SceneDelegate.swift in Sources */,
+				9CDDF373258CFC6D00758D6A /* MusicViewController.swift in Sources */,
 				9CFDDC53258A8125007C3142 /* TableViewCell.swift in Sources */,
 				9CEEDCBF258968DA005B83D1 /* TableViewController.swift in Sources */,
-				75D4EEC5258BEC1400C1F41D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
